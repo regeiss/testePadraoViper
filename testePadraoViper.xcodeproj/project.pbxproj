@@ -11,6 +11,10 @@
 		E15CE94F26DECA0C00C9A696 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15CE94E26DECA0C00C9A696 /* ContentView.swift */; };
 		E15CE95126DECA1000C9A696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15CE95026DECA1000C9A696 /* Assets.xcassets */; };
 		E15CE95426DECA1000C9A696 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15CE95326DECA1000C9A696 /* Preview Assets.xcassets */; };
+		E15CE95C26DECA7A00C9A696 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15CE95B26DECA7A00C9A696 /* Person.swift */; };
+		E160243526DFBBEB0094D35C /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160243426DFBBEB0094D35C /* PostsView.swift */; };
+		E160243826DFC0850094D35C /* PersonsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160243726DFC0850094D35C /* PersonsPresenter.swift */; };
+		E160243B26DFC3330094D35C /* PersonsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160243A26DFC3330094D35C /* PersonsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		E15CE94E26DECA0C00C9A696 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E15CE95026DECA1000C9A696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15CE95326DECA1000C9A696 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E15CE95B26DECA7A00C9A696 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E160243426DFBBEB0094D35C /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		E160243726DFC0850094D35C /* PersonsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsPresenter.swift; sourceTree = "<group>"; };
+		E160243A26DFC3330094D35C /* PersonsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,10 @@
 		E15CE94B26DECA0C00C9A696 /* testePadraoViper */ = {
 			isa = PBXGroup;
 			children = (
+				E160243926DFC3180094D35C /* Interactors */,
+				E160243626DFC02F0094D35C /* Presenters */,
+				E160243326DFBBBE0094D35C /* Views */,
+				E15CE95A26DECA5E00C9A696 /* Models */,
 				E15CE94C26DECA0C00C9A696 /* testePadraoViperApp.swift */,
 				E15CE94E26DECA0C00C9A696 /* ContentView.swift */,
 				E15CE95026DECA1000C9A696 /* Assets.xcassets */,
@@ -65,6 +77,38 @@
 				E15CE95326DECA1000C9A696 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E15CE95A26DECA5E00C9A696 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E15CE95B26DECA7A00C9A696 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E160243326DFBBBE0094D35C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E160243426DFBBEB0094D35C /* PostsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E160243626DFC02F0094D35C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				E160243726DFC0850094D35C /* PersonsPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		E160243926DFC3180094D35C /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				E160243A26DFC3330094D35C /* PersonsInteractor.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E160243B26DFC3330094D35C /* PersonsInteractor.swift in Sources */,
+				E15CE95C26DECA7A00C9A696 /* Person.swift in Sources */,
 				E15CE94F26DECA0C00C9A696 /* ContentView.swift in Sources */,
+				E160243526DFBBEB0094D35C /* PostsView.swift in Sources */,
+				E160243826DFC0850094D35C /* PersonsPresenter.swift in Sources */,
 				E15CE94D26DECA0C00C9A696 /* testePadraoViperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
