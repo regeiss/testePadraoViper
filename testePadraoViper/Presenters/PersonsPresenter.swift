@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import SwiftUI
 
-class PersonsPresenter
+class PersonsPresenter: ObservableObject
 {
     @Published var persons: [Person] = []
     
@@ -19,7 +19,8 @@ class PersonsPresenter
     init(interactor: PersonsInteractor)
     {
         self.interactor = interactor
-        
         interactor.model.$persons
+            .assign(to: \.persons, on: self)
+            .store(in: &cancelabbles)
     }
 }

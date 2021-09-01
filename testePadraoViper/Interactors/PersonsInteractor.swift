@@ -10,9 +10,9 @@ import Foundation
 class PersonsInteractor
 {
     
-    let model: Person
+    let model: DataModel
     
-    init(model: Person)
+    init(model: DataModel)
     {
         self.model = model
     }

@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct PostsView: View
+struct PersonsView: View
 {
+    @ObservedObject var presenter: PersonsPresenter
+    
     var body: some View
     {
         NavigationView
@@ -18,14 +20,17 @@ struct PostsView: View
                 Text("Hello, World!")
             }
             .navigationTitle("Navigation")
-        }.onAppear(perform: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        }//.onAppear(perform: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
     }
 }
 
-struct PostsView_Previews: PreviewProvider
+struct PersonsView_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        PostsView()
+        let model = DataModel
+        let interactor = PersonsInteractor(model: model)
+        let presenter  = PersonsPresenter(interactor: interactor)
+        PersonsView(presenter: presenter)
     }
 }
